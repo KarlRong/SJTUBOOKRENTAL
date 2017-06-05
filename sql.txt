@@ -1,0 +1,8 @@
+INSERT INTO user (pnumber,password) VALUES ('15262738631', md5('12345678'));
+
+
+
+user
+id int10
+pnumber varchar11
+password varchar32

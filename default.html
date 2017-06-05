@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>博客</title>
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/modernizr.custom.js"></script>
+
+</head>
+<body>
+
+
+
+
+<div class="main">
+		<ul id="cbp-bislideshow" class="cbp-bislideshow">
+			<li><img src="images/1.jpg" alt="image01"/></li>
+			<li><img src="images/2.jpg" alt="image02"/></li>
+			<li><img src="images/3.jpg" alt="image03"/></li>
+		</ul>
+</div>
+<script src="js/jquery.imagesloaded.min.js"></script>
+<script src="js/cbpBGSlideshow.min.js"></script>
+<script>
+		$(function() {
+			cbpBGSlideshow.init();
+		});
+</script>
+<script type="text/javascript">
+        var xmlHttp;
+        var inputField;
+ 
+        function createXMLHttpRequest() {
+            if (window.ActiveXObject) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            }
+        }
+ 
+        function initVars() {
+            inputField = document.getElementById("numbers");
+        }
+ 
+        function findPnumbers() {
+            initVars();
+            if (inputField.value.length > 0) {
+                createXMLHttpRequest();
+				var number = inputField.value;
+
+				var para="pnumbers="+number;
+				
+                var url = "searchn.php";
+                xmlHttp.open("POST", url, true);
+                xmlHttp.onreadystatechange = callback;
+				 xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;");
+                xmlHttp.send(para);
+            } else {
+                clearPnumbers();
+            }
+        }
+ 
+        function callback() {
+            if (xmlHttp.readyState == 4) {
+                if (xmlHttp.status == 200) {
+                    var name = xmlHttp.responseXML.getElementsByTagName("name");
+					if(name.length !==0){
+					 document.getElementById("showmessage").innerHTML="该号码已经被注册过";
+					}else{
+					document.getElementById("showmessage").innerHTML="";
+					}
+                } else if (xmlHttp.status == 204){  
+                    clearPnumbers();
+                }
+            }
+        }
+		function clearPnumbers() {
+		document.getElementById("showmessage").innerHTML="";
+        }
+	
+	/**function MyString(str){
+		this.str = str;
+		this.getstring = function(){
+		return this.str;
+		}
+		//截去字符串头部空格
+		function ltrim(str){
+		vai i = 0;
+			while (str.charAt(i) == ' '){
+			++i;
+			}
+		return str.substring(i,str.length);	
+		}
+		//截去字符串尾部空格
+		function strim(str){
+		vai i = str.length - 1;
+			while (str.charAt(i) == ' '){
+			--i;
+			}
+		return str.substring(0,i + 1);	
+		}
+		//截去字符串头尾空格
+		function trim(str){
+			return ltrim(rtrim(str));
+		}
+	this.str = trim(this.str);
+	}*/
+	
+	function logcheck(){
+		var ppnumber = document.login.number.value
+		var pass = document.login.pass.value
+		if(ppnumber == ""){
+		alert('手机号码为空');
+		return false;
+		}
+		if(pass == ""){
+		alert('密码为空');
+		return false;
+		}
+		var rs = /^1\d{10}$/;
+		if(!rs.test(ppnumber)){
+        alert("手机号码格式不正确");
+		return false;
+		}
+		var re =  /[0-9a-zA-Z]{1}[0-9a-zA-Z\-]{5,15}/;
+		if(!re.test(pass)){
+        alert("密码格式不正确");
+		return false;
+		}
+		return true;
+	}
+		
+	function regcheck(){
+		var rnumber = document.register.rnumber.value
+		var rpass = document.register.rpass.value
+		var rrpass = document.register.rrpass.value
+		if(rnumber == ""){
+		alert('手机号码为空');
+		return false;
+		}
+		if(rpass == ""){
+		alert('密码为空');
+		return false;
+		}
+		if(rrpass == ""){
+		alert('确认密码为空');
+		return false;
+		}
+		var rs = /^1\d{10}$/;
+		if(!rs.test(rnumber)){
+        alert("手机号码格式不正确");
+		return false;
+		}
+		var re =  /[0-9a-zA-Z]{1}[0-9a-zA-Z\-]{5,15}/;
+		if(!re.test(rpass)){
+        alert("密码格式不正确");
+		return false;
+		}
+		if(rpass != rrpass){
+		alert("确认密码和密码不一致");
+		return false;
+		}
+		return true;
+	}
+    </script>
+
+<div class="content">
+<div class="left">
+<div class="note">
+<h3>使用本博客请务必遵守如下规定：</h3>
+    <ol>
+	<li>答案是肯定的。“一带一路”倡议提出3年多来</li>
+	<li>历史的启示。自汉代张骞凿空西域开始，丝绸之路已有两千多年的历史。</li>
+	<li>郑和”、“马可波罗”迎着惊涛骇浪，往来在丝绸之路上。</li>
+	<li>和地中海几个文明圈连在了一起。千百年来，无数个“张骞”</li>
+
+	</ol>
+</div>
+</div>
+<div class="right">
+
+<div class="grid_2" id="grid_2">
+	<div class="tj_1">
+	<a href="#" onclick="javascript:document.getElementById('grid_2').style.display = 'none';document.getElementById('grid_1').style.display = '';UserValidator.setMode('Register');" id="register">注   册</a>
+	</div>
+	
+	
+<form name="login" action="" method="post" onSubmit="return logcheck();"enctype="multipart/form-data">
+	<input type="text" name="number" class="text" value="" placeholder="手机号码"/>
+	<input type="password" name="pass" class="text" value="" placeholder="登陆密码"/>
+	<input type="submit" name="submit" value="登        陆"/>
+</form>
+</div>	
+
+
+
+<div class="grid_1" id="grid_1" style="display:none;">
+	<div class="tj_2">
+	<a href="#" onclick="javascript:document.getElementById('grid_2').style.display = '';document.getElementById('grid_1').style.display = 'none';UserValidator.setMode('Register');" id="login">登   陆</a>
+	<p id="showmessage"></p>
+	</div>
+	
+	
+<form name="register" action=" " method="post" onSubmit="return regcheck();" enctype="multipart/form-data">
+	<input type="text" name="rnumber" class="text" value="" placeholder="手机号码" onkeyup="findPnumbers();" id="numbers"/>
+	<input type="password" name="rpass" class="text" value="" placeholder="登陆密码"/>
+	<input type="password" name="rrpass" class="text" value="" placeholder="确认密码"/>
+	<input type="submit" name="submit" value="注        册"/>
+</form>
+</div>
+
+
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="bottom">
+<div class="spot">
+<div class="marq">
+联系号码: 150 2150 9652，邮箱:1058629527@qq.com ，设计制作：一行，Copyright &copy; 2014-2018 Sunhang . All rights reserved.
+</div>
+</div>
+</div>
+</body>
+</html>

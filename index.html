@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>交大图书共享系统</title>
+<link rel="stylesheet" type="text/css" href="css/index.min.css" />
+<link rel="stylesheet" type="text/css" href="css/component.min.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/modernizr.custom.js"></script>
+
+</head>
+<body>
+
+
+
+
+<div class="main">
+		<ul id="cbp-bislideshow" class="cbp-bislideshow">
+			<li><img src="images/1.jpg" alt="image01"/></li>
+			<li><img src="images/2.jpg" alt="image02"/></li>
+			<li><img src="images/3.jpg" alt="image03"/></li>
+		</ul>
+</div>
+<script src="js/jquery.imagesloaded.min.js"></script>
+<script src="js/cbpBGSlideshow.min.js"></script>
+<script>
+		$(function() {
+			cbpBGSlideshow.init();
+		});
+</script>
+<script src="js/recheck.min.js"></script>
+
+<div class="content">
+<div class="left">
+<div class="note">
+<h3>登陆和注册说明：</h3>
+    <ol>
+	<li>使用手机号码登陆和注册。</li>
+	<li>密码为6到16位字母、数字、下划线。</li>
+	</ol>
+</div>
+</div>
+<div class="right">
+
+<div class="grid_2" id="grid_2">
+	<div class="tj_1">
+	<a href="#" onclick="javascript:document.getElementById('grid_2').style.display = 'none';document.getElementById('grid_1').style.display = '';UserValidator.setMode('Register');" id="register">注   册</a>
+	</div>
+	
+	
+<form name="login" action="login.php" method="post" onSubmit="return logcheck();"enctype="multipart/form-data">
+	<input type="text" name="number" class="text" value="" placeholder="手机号码" autocomplete="off" disableautocomplete/>
+	<input type="password" name="pass" class="text" value="" placeholder="登陆密码" autocomplete="off" disableautocomplete/>
+	<input type="submit" name="submit" value="登        陆"/>
+</form>
+</div>	
+
+
+
+<div class="grid_1" id="grid_1" style="display:none;">
+	<div class="tj_2">
+	<a href="#" onclick="javascript:document.getElementById('grid_2').style.display = '';document.getElementById('grid_1').style.display = 'none';UserValidator.setMode('Register');" id="login">登   陆</a>
+	<p id="showmessage"></p>
+	</div>
+	
+	
+<form name="register" action="register.php" method="post" onSubmit="return regcheck();" enctype="multipart/form-data">
+	<input type="text" name="rnumber" class="text" value="" placeholder="手机号码" onkeyup="findPnumbers();" id="numbers" autocomplete="off" disableautocomplete/>
+	<input type="password" name="rpass" class="text" value="" placeholder="登陆密码" autocomplete="off" disableautocomplete/>
+	<input type="password" name="rrpass" class="text" value="" placeholder="确认密码" autocomplete="off" disableautocomplete/>
+	<input type="submit" name="submit" value="注        册"/>
+</form>
+</div>
+
+
+</div>
+<div class="clear"></div>
+
+</div>
+<div class="bottom">
+<div class="spot">
+<div class="marq">
+联系号码: 150 2150 9652，邮箱:1058629527@qq.com ，设计制作：一行，Copyright &copy; 2014-2018 Sunhang . All rights reserved.
+</div>
+</div>
+</div>
+</body>
+</html>

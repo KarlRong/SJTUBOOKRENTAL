@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+		function changeText()
+		{
+			if(document.getElementById("field1").value=="借书成功")
+				{document.getElementById("field1").value="申请还书";
+				document.getElementById("button1").value="确认归还";}
+			else{document.getElementById("field1").value="单方还书";
+				document.getElementById("button1").value="已确认";}
+		}
+
+		function changeText2()
+		{
+			if(document.getElementById("field2").value=="借书成功")
+				{document.getElementById("field2").value="申请还书";
+		  		document.getElementById("button2").value="确认归还";}
+			else{document.getElementById("field2").value="单方还书";
+				document.getElementById("button2").value="已确认";}
+		}
+		
+		function changeText3()
+		{
+			if(document.getElementById("field3").value=="借书成功")
+				{document.getElementById("field3").value="申请还书";
+				document.getElementById("button3").value="确认归还";}
+			else{document.getElementById("field3").value="单方还书";
+				document.getElementById("button3").value="已确认";}
+		}
+		</script>
+		<meta charset="UTF-8">
+		<title>本人借入图书</title>
+	</head>
+	
+	<body >
+		<div style="position:fixed; width:100%; height:100%; z-index:-1"><img src="Mao7.jpg" height="100%" width="100%" /></div><br/>
+		<h1 style="text-align: center;">本人借入图书</h1><br><br><br><br>
+
+		<table style="background-color:#99bbbb;" border="1" align="center">
+			<tr>
+				<td colspan="3" style="background-color:#99bbbb;">
+					<h2 style="text-align: center;">本人借入图书列表</h2>
+				</td>
+			</tr>
+
+			<tr valign="center">
+				<td style="background-color:#ffff99;width:200px;text-align:center;"><b>书籍</b></td>
+				<td style="background-color:#EEEEEE;height:20px;width:200px;text-align:center;"><b>书籍状态</b></td>
+				<td style="background-color:#EEEEEE;height:20px;width:200px;text-align:center;"><b>操作</b></td>
+			</tr>
+
+			<tr valign="center">
+				<td style="background-color:#ffff99;width:200px;text-align:center;">
+					<img src="juzhenlilun.jpg" height="300px" width="200px" /><br>
+				《矩阵理论》</td>
+				<td style="background-color:#EEEEEE;height:100px;width:200px;text-align:center;"> <input type="text" id="field1" value="借书成功" style="border:none;height:30px;width:100px;font-size:20px;background-color:#EEEEEE;"><br></td>
+				<td style="background-color:#EEEEEE;height:100px;width:200px;text-align:center;">
+					<input type="button" onclick="changeText()" id="button1" style="height:30px;width:100px;text-align:center;font-size:20px;" value="申请还书"></button> </td>
+			</tr>
+
+				
+			<tr valign="center">
+				<td style="background-color:#ffff99;width:200px;text-align:center;">
+					<img src="baiyexing.jpg" height="300px" width="200px" /><br>
+				《白夜行》</td>
+				<td style="background-color:#EEEEEE;height:100px;width:200px;text-align:center;"> <input type="text" id="field2" value="借书成功" style="border:none;height:30px;width:100px;font-size:20px;background-color:#EEEEEE;"><br></td>
+				<td style="background-color:#EEEEEE;height:100px;width:200px;text-align:center;">
+					<input type="button" onclick="changeText2()" id="button2" style="height:30px;width:100px;text-align:center;font-size:20px;" value="申请还书"></button> </td>
+			</tr>
+
+			<tr valign="center">
+				<td style="background-color:#ffff99;width:200px;text-align:center;">
+					<img src="fuermosi.jpg" height="300px" width="200px" /><br>
+					《福尔摩斯探案集》</td>
+				<td style="background-color:#EEEEEE;height:100px;width:200px;text-align:center;"> <input type="text" id="field3" value="借书成功" style="border:none;height:30px;width:100px;font-size:20px;background-color:#EEEEEE;"><br></td>
+				<td style="background-color:#EEEEEE;height:100px;width:200px;text-align:center;">
+					<input type="button" onclick="changeText3()" id="button3" style="height:30px;width:100px;text-align:center;font-size:20px;" value="申请还书"></button> </td>
+			</tr>
+		</table>				
+	</body>
+</html>
