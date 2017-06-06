@@ -121,7 +121,7 @@ HTML;
 
 
 		<div  align="center" style="position:fixed;bottom:3px;width:100%">
-			<p>联系号码: 189 1689 3352，邮箱:1652705695@qq.com ，设计制作：庄子龙，Copyright &copy; 2017-2021 zhuangzilong . All rights reserved.</p>
+			<p>联系号码: 18818270804，邮箱:sjturjk@icloud.com ，设计制作：:荣岌昆，Copyright &copy; 2017-2017 sjtubookrent . All rights reserved.</p>
 		</div>
 	</body>
 </html>

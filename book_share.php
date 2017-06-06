@@ -52,8 +52,10 @@ if ((($_FILES["bookPhoto"]["type"] == "image/gif")
         } 
 //      echo "数据库连接成功" . "<br>";
         mysqli_set_charset($conn,"utf8");
-        
-        $_FILES["bookPhoto"]["name"] = $_SESSION['validate']['pnumber'] . "_" .$_FILES["bookPhoto"]["name"];
+      echo date('Y-m-d-H-i-s');
+        $currenttime = date('Y-m-d-H-i-s');
+//      $_FILES["bookPhoto"]["name"] = $_SESSION['validate']['pnumber'] . "_" .$_FILES["bookPhoto"]["name"];
+        $_FILES["bookPhoto"]["name"] = $_SESSION['validate']['pnumber'] . "_" .$currenttime;
 		if (file_exists("upload/" . $_FILES["bookPhoto"]["name"]))
 		{
 //			echo $_FILES["bookPhoto"]["name"] . " 文件已经存在。 ";
@@ -189,7 +191,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 
 		<div  align="center" style="position:fixed;bottom:3px;width:100%">
-			<p>联系号码: 189 1689 3352，邮箱:1652705695@qq.com ，设计制作：庄子龙，Copyright &copy; 2017-2021 zhuangzilong . All rights reserved.</p>
+			<p>联系号码: 18818270804，邮箱:sjturjk@icloud.com ，设计制作：:荣岌昆，Copyright &copy; 2017-2017 sjtubookrent . All rights reserved.</p>
 		</div>
 	</body>
 </html>
